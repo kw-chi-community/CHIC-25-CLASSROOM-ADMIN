@@ -6,17 +6,17 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import Login from "./Pages/Login";
-import Signup from "./Pages/Signup";
-import FindPassword from "./Pages/FindPassword";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import FindPassword from "./pages/FindPassword";
 
-import ReservationStatusPage from "./Pages/ReservationAdmin/ReservationStatusPage";
-import ClassroomInfoPage from "./Pages/ReservationAdmin/ClassroomInfoPage";
-import ClassInfoPage from "./Pages/ReservationAdmin/ClassInfoPage";
-import NoticePage from "./Pages/NoticeAdmin/NoticePage";
+import ReservationStatusPage from "./pages/ReservationAdmin/ReservationStatusPage";
+import ClassroomInfoPage from "./pages/ReservationAdmin/ClassroomInfoPage";
+import ClassInfoPage from "./pages/ReservationAdmin/ClassInfoPage";
+import NoticePage from "./pages/NoticeAdmin/NoticePage";
 
-import ProtectedRoute from "./Components/route/ProtectedRoute";
-import PublicOnlyRoute from "./Components/route/PublicOnlyRoute";
+import ProtectedRoute from "./components/route/ProtectedRoute";
+import PublicOnlyRoute from "./components/route/PublicOnlyRoute";
 
 const App = () => {
   return (

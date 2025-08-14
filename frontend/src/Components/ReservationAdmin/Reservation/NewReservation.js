@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "../css/newReservation.css";
-import Calender from "../../../Image/Calender.svg";
-import ReservationDetail from "../Reservation/ReservationDetail";
-import Doorbell from "../../../Image/Doorbell.svg";
-import Exclamation from "../../../Image/Exclamation.svg";
+import Calender from "../../../image/Calender.svg";
+import ReservationDetail from "./ReservationDetail";
+import Doorbell from "../../../image/Doorbell.svg";
+import Exclamation from "../../../image/Exclamation.svg";
 
 const NewReservation = ({
   onClose,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/deleteInfo.css";
-import Copy from "../../../Image/Copy.svg";
-import CopySubmit from "../../../Image/CopySubmit.svg";
+import Copy from "../../../image/Copy.svg";
+import CopySubmit from "../../../image/CopySubmit.svg";
 
 const DeleteInfo = ({ phone, studentName }) => {
   const [copied, setCopied] = useState(false);

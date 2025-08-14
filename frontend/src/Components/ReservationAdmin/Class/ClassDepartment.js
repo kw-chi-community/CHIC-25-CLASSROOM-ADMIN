@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../css/classroomBuilding.css";
 import ClassName from "./ClassName";
-import Keyboard_arrow_down from "../../../Image/Keyboard_arrow_down.svg";
-import Keyboard_arrow_up from "../../../Image/Keyboard_arrow_up.svg";
-import Book from "../../../Image/Book.svg";
+import Keyboard_arrow_down from "../../../image/Keyboard_arrow_down.svg";
+import Keyboard_arrow_up from "../../../image/Keyboard_arrow_up.svg";
+import Book from "../../../image/Book.svg";
 
 const ClassDepartment = ({ classes, onUpdate, semester }) => {
   const [openDepartments, setOpenDepartments] = useState({});

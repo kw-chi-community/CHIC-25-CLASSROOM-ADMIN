@@ -3,11 +3,11 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/Pages.css";
 import "./css/classroomInfoUpdatePage.css";
-import Sidebar from "../../Components/Sidebar";
-import ClassroomBuilding from "../../Components/ReservationAdmin/Classroom/ClassroomBuilding";
-import ClassroomCreate from "../../Components/ReservationAdmin/Classroom/ClassroomCreate";
-import LogoutButton from "../../Components/LogoutButton";
-import KW_logo from "../../Image/KW_logo.svg";
+import Sidebar from "../../components/Sidebar";
+import ClassroomBuilding from "../../components/ReservationAdmin/Classroom/ClassroomBuilding";
+import ClassroomCreate from "../../components/ReservationAdmin/Classroom/ClassroomCreate";
+import LogoutButton from "../../components/LogoutButton";
+import KW_logo from "../../image/KW_logo.svg";
 
 const ClassroomInfoPage = () => {
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;

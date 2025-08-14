@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "../css/reservationModal.css";
 import Calendar from "./Calendar";
-import Book from "../../../Image/Book.svg";
+import Book from "../../../image/Book.svg";
 
 const ClassPdfUpload = ({ onClose }) => {
   // 백앤드 주소

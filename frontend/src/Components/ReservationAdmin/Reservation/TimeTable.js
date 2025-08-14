@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/timetable.css";
 import ReservationDetail from "./ReservationDetail";
-import Calender from "../../../Image/Calender.svg";
+import Calender from "../../../image/Calender.svg";
 
 const TimeTable = ({
   reservations,

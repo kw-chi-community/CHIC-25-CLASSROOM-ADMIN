@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import "../css/Pages.css";
 import "./css/noticePage.css";
-import NoticeRow from "../../Components/NoticeAdmin/NoticeRow";
-import NoticeCreate from "../../Components/NoticeAdmin/NoticeCreate";
-import LogoutButton from "../../Components/LogoutButton";
-import KW_logo from "../../Image/KW_logo.svg";
-import Sidebar from "../../Components/Sidebar";
+import NoticeRow from "../../components/NoticeAdmin/NoticeRow";
+import NoticeCreate from "../../components/NoticeAdmin/NoticeCreate";
+import LogoutButton from "../../components/LogoutButton";
+import KW_logo from "../../image/KW_logo.svg";
+import Sidebar from "../../components/Sidebar";
 
 const NoticePage = () => {
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;

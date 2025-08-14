@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/reservationModal.css";
-import Book from "../../../Image/Book.svg";
+import Book from "../../../image/Book.svg";
 
 const ClassUpdate = ({ classes, onClose, onUpdate, semester }) => {
   // 백앤드 주소

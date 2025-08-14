@@ -1,21 +1,20 @@
 import React from "react";
 
+/**
+ * 예약 현황 검색바 (학기만 선택)
+ * - 날짜 / 건물 / 호수 UI 제거 (캘린더 가시범위로 대체)
+ */
 const ReservationSearchBar = ({
   semester,
-  semesterList,
-  searchBuilding,
-  searchRoom,
-  searchDate,
-  availableRooms,
+  semesterList = [], // undefined 방지
   handleSemesterChange,
-  onChangeBuilding,
-  onChangeRoom,
-  onChangeDate,
   hasSemesterError,
 }) => {
+  const isEmpty = !hasSemesterError && semesterList.length === 0;
+
   return (
     <div className="reservation-status__search">
-      {/* 1행: 학기 + 날짜 */}
+      {/* 학기 (날짜 입력 UI 제거) */}
       <ul className="reservation-status__search-list row">
         <li className="reservation-status__search-item">
           <label
@@ -29,76 +28,19 @@ const ReservationSearchBar = ({
             className="reservation-status__search-input"
             value={semester}
             onChange={handleSemesterChange}
-            disabled={hasSemesterError}
+            disabled={hasSemesterError || isEmpty}
+            aria-invalid={hasSemesterError ? "true" : "false"}
           >
             {hasSemesterError ? (
               <option>학기 정보를 불러올 수 없습니다</option>
+            ) : isEmpty ? (
+              <option>학기 목록을 불러오는 중...</option>
             ) : (
               semesterList.map((sem, idx) => (
                 <option key={idx} value={sem}>
                   {sem}
                 </option>
               ))
-            )}
-          </select>
-        </li>
-
-        <li className="reservation-status__search-item">
-          <label className="reservation-status__search-label">날짜</label>
-          <input
-            type="date"
-            className="reservation-status__search-input"
-            placeholder="YYYY-MM-DD 형식으로 입력하세요."
-            onChange={onChangeDate}
-            value={searchDate}
-          />
-        </li>
-      </ul>
-
-      {/* 2행: 건물명 + 호수 */}
-      <ul className="reservation-status__search-list row">
-        <li className="reservation-status__search-item">
-          <label
-            htmlFor="building-select"
-            className="reservation-status__search-label"
-          >
-            건물명
-          </label>
-          <select
-            id="building-select"
-            className="reservation-status__search-input"
-            value={searchBuilding}
-            onChange={onChangeBuilding}
-          >
-            <option disabled value="">
-              건물을 선택하세요
-            </option>
-            <option value="기념관">기념관</option>
-            <option value="비마관">비마관</option>
-            <option value="화도관">화도관</option>
-            <option value="한울관">한울관</option>
-            <option value="누리관">누리관</option>
-            <option value="참빛관">참빛관</option>
-            <option value="새빛관">새빛관</option>
-          </select>
-        </li>
-
-        <li className="reservation-status__search-item">
-          <label className="reservation-status__search-label">호수</label>
-          <select
-            className="reservation-status__search-input"
-            value={searchRoom}
-            onChange={onChangeRoom}
-            disabled={availableRooms.length === 0}
-          >
-            {availableRooms.length > 0 ? (
-              availableRooms.map((room, idx) => (
-                <option key={idx} value={room}>
-                  {room}
-                </option>
-              ))
-            ) : (
-              <option value="">선택할 수 있는 강의실이 없습니다</option>
             )}
           </select>
         </li>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/reservationModal.css";
 import ClassroomUpdate from "./ClassroomUpdate";
-import School from "../../../Image/School.svg";
+import School from "../../../image/School.svg";
 
 const DetailModal = ({ classroom, onClose, onUpdate }) => {
   // 백앤드 주소

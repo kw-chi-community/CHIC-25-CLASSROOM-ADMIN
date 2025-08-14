@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "../css/reservationModal.css";
-import Calender from "../../../Image/Calender.svg";
+import Calender from "../../../image/Calender.svg";
 import DeleteInfo from "./DeleteInfo";
 
 const ReservationDetail = ({ rowData, onClose, fetchNewReservations }) => {
@@ -66,13 +66,13 @@ const ReservationDetail = ({ rowData, onClose, fetchNewReservations }) => {
 
   // 공통 필드 예외처리
   const title = isClass
-    ? rowData.class_name ?? "정보없음"
+    ? (rowData.class_name ?? "정보없음")
     : `${rowData.building ?? ""} ${
         rowData.room ?? rowData.roomId ?? ""
       } 예약`.trim() || "정보없음";
 
   const subTitle = isClass
-    ? rowData.professor ?? `(${rowData.prof_name})` ?? "정보없음"
+    ? (rowData.professor ?? `(${rowData.prof_name})` ?? "정보없음")
     : "";
 
   // 강의실

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/Pages.css";
 import "./css/classPage.css";
-import Sidebar from "../../Components/Sidebar";
-import ClassDepartment from "../../Components/ReservationAdmin/Class/ClassDepartment";
-import ClassCreate from "../../Components/ReservationAdmin/Class/ClassCreate";
-import ClassPdfUpload from "../../Components/ReservationAdmin/Class/ClassPdfUpload";
-import LogoutButton from "../../Components/LogoutButton";
+import Sidebar from "../../components/Sidebar";
+import ClassDepartment from "../../components/ReservationAdmin/Class/ClassDepartment";
+import ClassCreate from "../../components/ReservationAdmin/Class/ClassCreate";
+import ClassPdfUpload from "../../components/ReservationAdmin/Class/ClassPdfUpload";
+import LogoutButton from "../../components/LogoutButton";
 import { useNavigate } from "react-router-dom";
-import KW_logo from "../../Image/KW_logo.svg";
+import KW_logo from "../../image/KW_logo.svg";
 
 const ClassInfoPage = () => {
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;

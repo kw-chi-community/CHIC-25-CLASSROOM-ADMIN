@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../css/reservationModal.css";
-import School from "../../../Image/School.svg";
+import School from "../../../image/School.svg";
 
 const ClassroomUpdate = ({ classroom, onClose, onUpdate }) => {
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;

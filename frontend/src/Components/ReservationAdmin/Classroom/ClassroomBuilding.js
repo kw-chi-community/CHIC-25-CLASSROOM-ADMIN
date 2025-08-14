@@ -1,7 +1,7 @@
 import React from "react";
 import ClassroomRooms from "./ClassroomRooms";
 import "../css/classroomBuilding.css";
-import School from "../../../Image/School.svg";
+import School from "../../../image/School.svg";
 
 const ClassroomBuilding = ({ classrooms, onUpdate }) => {
   // 건물별 그룹핑
